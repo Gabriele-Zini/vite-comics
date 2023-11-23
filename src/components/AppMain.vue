@@ -76,6 +76,7 @@ main {
 
         .dc-elem-container {
             @include mixin.flex(row, center, center);
+            gap: 1rem;
 
             .text-img {
                 color: white;
