@@ -13,11 +13,10 @@ export default {
 
 <template>
   <AppHeader />
-  <AppMain/>
-  <AppFooter/>
+  <AppMain />
+  <AppFooter />
 </template>
 
 <style lang="scss">
 @use "./style/general.scss";
-
 </style>

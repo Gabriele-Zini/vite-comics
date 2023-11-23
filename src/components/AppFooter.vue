@@ -5,19 +5,116 @@ export default {
             topFooterElems: [
                 {
                     title: "dc comics",
-                    links: ["characters", "comics", "movies", "TV", "games", "videos", "news"]
+                    links: [
+                        {
+                            link: "characters",
+                            href: ""
+                        },
+                        {
+                            link: "comics",
+                            href: ""
+                        },
+                        {
+                            link: "movies",
+                            href: ""
+                        },
+                        {
+                            link: "TV",
+                            href: ""
+                        },
+                        {
+                            link: "games",
+                            href: ""
+                        },
+                        {
+                            link: "news",
+                            href: ""
+                        }],
                 },
                 {
                     title: "shop",
-                    links: ["characters", "comics"]
+                    links: [
+                        {
+                            link: "games",
+                            href: ""
+                        },
+                        {
+                            link: "news",
+                            href: ""
+                        }],
                 },
                 {
                     title: "dc",
-                    links: ["characters", "comics", "movies", "TV", "games", "videos", "news", "ratings", "shop help", "subscriptions", "jobs", "advertising"]
+                    links: [
+                        {
+                            link: "characters",
+                            href: ""
+                        },
+                        {
+                            link: "comics",
+                            href: ""
+                        },
+                        {
+                            link: "movies",
+                            href: ""
+                        },
+                        {
+                            link: "TV",
+                            href: ""
+                        },
+                        {
+                            link: "jobs",
+                            href: ""
+                        },
+                        {
+                            link: "subscriptions",
+                            href: ""
+                        },
+                        {
+                            link: "CPSC certificates",
+                            href: ""
+                        },
+                        {
+                            link: "ratings",
+                            href: ""
+                        },
+                        {
+                            link: "games",
+                            href: ""
+                        },
+                        {
+                            link: "contact us",
+                            href: ""
+                        },
+                        {
+                            link: "news",
+                            href: ""
+                        }],
                 },
                 {
                     title: "sites",
-                    links: ["DC characters", "DC comics", "DC movies", "DC games", "DC videos"]
+                    links: [
+                        {
+                            link: "DC",
+                            href: ""
+                        },
+                        {
+                            link: "MAD magazine",
+                            href: ""
+                        },
+                        {
+                            link: "DC movies",
+                            href: ""
+                        },
+                        {
+                            link: "DC Universe",
+                            href: ""
+                        },
+                        {
+                            link: "DC games",
+                            href: ""
+                        },
+                       ],
                 },
             ],
             socialLinks: [
@@ -57,7 +154,7 @@ export default {
                     <h3>{{ item.title }}
                     </h3>
                     <ul>
-                        <li v-for="(link) in item.links" :key="link"><a href="">{{ link }}</a></li>
+                        <li v-for="link in item.links" :key="link.link"><a :href="link.href" >{{ link.link }}</a></li>
                     </ul>
                 </li>
             </ul>
