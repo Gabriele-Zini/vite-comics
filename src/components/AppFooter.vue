@@ -154,6 +154,10 @@ footer {
                 font-weight: 900;
                 font-size: 1.2rem;
                 cursor: pointer;
+
+                &:hover {
+                    background-color: variables.$primary_color;
+                }
             }
 
             div:first-of-type {
