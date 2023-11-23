@@ -72,11 +72,16 @@ export default {
 .container {
     margin: 0 auto;
     width: 70%;
-    padding: 1rem 0;
+
+
 
     header {
         @include mixin.flex(row, space-between, center);
-        height: 80px;
+        height: 100px;
+
+        nav {
+            height: 100%;
+        }
 
         .logo {
             width: 4rem;
@@ -86,6 +91,12 @@ export default {
             @include mixin.flex(row, center, center);
             gap: 1rem;
             list-style: none;
+            height: 100%;
+
+            li {
+                height: 100%;
+
+            }
 
             a {
                 text-decoration: none;
@@ -93,6 +104,17 @@ export default {
                 color: rgb(30, 27, 27);
                 font-weight: 900;
                 font-size: .8rem;
+                height: inherit;
+                display: inline-block;
+                @include mixin.flex(row, center, center);
+                box-sizing: border-box;
+                border-bottom: 5px solid transparent;
+
+
+                &:hover {
+                    color: variables.$primary_color;
+                    border-bottom: 5px solid variables.$primary_color;
+                }
             }
         }
     }

@@ -124,6 +124,10 @@ footer {
                         text-decoration: none;
                         text-transform: capitalize;
                         font-size: .9rem;
+
+                        &:hover {
+                            color: white;
+                        }
                     }
                 }
             }
@@ -145,7 +149,7 @@ footer {
                 color: white;
                 background-color: variables.$footer_color;
                 border: 3px solid variables.$primary_color;
-                padding:.8rem 1.5rem;
+                padding: .8rem 1.5rem;
                 text-transform: uppercase;
                 font-weight: 900;
                 font-size: 1.2rem;

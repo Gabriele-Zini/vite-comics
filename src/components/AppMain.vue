@@ -42,7 +42,7 @@ export default {
         <section>
             <div class="dc-elem-container" v-for="item of dcElems" :key="item">
                 <img :src="getImage(item.img)" alt="">
-                <div><a  class="text-img" href="">{{ item.text }}</a></div>
+                <div><a class="text-img" href="">{{ item.text }}</a></div>
             </div>
         </section>
     </main>
@@ -82,6 +82,10 @@ main {
                 color: white;
                 text-transform: uppercase;
                 text-decoration: none;
+
+                &:hover {
+                    color: black;
+                }
             }
 
             img {
