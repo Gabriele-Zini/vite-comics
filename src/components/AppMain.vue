@@ -100,6 +100,9 @@ export default {
                 <AppMainCard :thumb="comic.thumb" :price="comic.price" :type="comic.type" :series="comic.series" />
             </div>
         </div>
+        <div class="load-more-container">
+            <button>load more</button>
+        </div>
         <AppSection />
     </main>
 </template>
@@ -111,11 +114,6 @@ export default {
 main {
     background-color: variables.$main-bg-color;
 
-    .button-container {
-        width: 70%;
-        margin: 0 auto;
-    }
-
     button {
         border: 1px solid transparent;
         background-color: variables.$primary-color;
@@ -124,9 +122,19 @@ main {
         color: white;
         font-weight: bolder;
         cursor: pointer;
-        position: relative;
-        bottom: 25px
     }
+
+    .button-container {
+        width: 70%;
+        margin: 0 auto;
+
+        button {
+            cursor: pointer;
+            position: relative;
+            bottom: 25px
+        }
+    }
+
 
     .row {
         @include mixin.flex(row, center, stretch);
@@ -138,6 +146,11 @@ main {
             width: calc(100% / 6);
 
         }
+    }
+
+    .load-more-container {
+        @include mixin.flex(row, center, center);
+        margin-bottom: 20px;
     }
 }
 </style>
