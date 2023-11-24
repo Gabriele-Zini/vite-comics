@@ -30,6 +30,7 @@ export default {
 
     p {
         text-transform: uppercase;
+        font-size: .8rem;
     }
 
     p:first-of-type {
