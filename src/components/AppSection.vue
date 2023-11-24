@@ -28,7 +28,7 @@ export default {
     },
     methods: {
         getImage(img) {
-            return new URL(`../../public/img/${img}`, import.meta.url).href;
+            return new URL(`../img/${img}`, import.meta.url).href;
         }
     }
 }

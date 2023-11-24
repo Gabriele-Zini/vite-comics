@@ -114,7 +114,7 @@ export default {
                             link: "DC games",
                             href: ""
                         },
-                       ],
+                    ],
                 },
             ],
             socialLinks: [
@@ -139,7 +139,7 @@ export default {
     methods: {
 
         getImage(img) {
-            return new URL(`../../public/img/${img}`, import.meta.url).href;
+            return new URL(`../img/${img}`, import.meta.url).href;
         }
 
     }
@@ -154,7 +154,7 @@ export default {
                     <h3>{{ item.title }}
                     </h3>
                     <ul>
-                        <li v-for="link in item.links" :key="link.link"><a :href="link.href" >{{ link.link }}</a></li>
+                        <li v-for="link in item.links" :key="link.link"><a :href="link.href">{{ link.link }}</a></li>
                     </ul>
                 </li>
             </ul>
@@ -179,10 +179,10 @@ export default {
 @use "../style/partials/mixin.scss";
 
 footer {
-    background-image: url(../../public/img/footer-bg.jpg);
+    background-image: url(../img/footer-bg.jpg);
 
     .top-footer {
-        background-image: url(../../public/img/dc-logo-bg.png);
+        background-image: url(../img/dc-logo-bg.png);
         background-repeat: no-repeat;
         background-position: right bottom;
         min-height: 400px;
