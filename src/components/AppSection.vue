@@ -36,9 +36,11 @@ export default {
 
 <template>
     <section>
-        <div class="dc-elem-container" v-for="item of dcElems" :key="item">
-            <img :src="getImage(item.img)" alt="">
-            <div><a class="text-img" href="">{{ item.text }}</a></div>
+        <div class="row">
+            <div class="card" v-for="item of dcElems" :key="item">
+                <img :src="getImage(item.img)" alt="">
+                <div><a class="text-img" href="">{{ item.text }}</a></div>
+            </div>
         </div>
     </section>
 </template>
@@ -53,22 +55,28 @@ section {
     @include mixin.flex(row, center, center);
     gap: 2rem;
 
-    .dc-elem-container {
+    .row {
         @include mixin.flex(row, center, center);
-        gap: 1rem;
+        gap: 2.2rem;
 
-        .text-img {
-            color: white;
-            text-transform: uppercase;
-            text-decoration: none;
+        .card {
+            @include mixin.flex(row, center, center);
+            gap: .8rem;
 
-            &:hover {
-                color: black;
+
+            .text-img {
+                color: white;
+                text-transform: uppercase;
+                text-decoration: none;
+
+                &:hover {
+                    color: black;
+                }
             }
-        }
 
-        img {
-            width: 3rem;
+            img {
+                width: 3rem;
+            }
         }
     }
 }
