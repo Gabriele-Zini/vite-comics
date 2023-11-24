@@ -122,6 +122,11 @@ main {
         color: white;
         font-weight: bolder;
         cursor: pointer;
+        border: 3px solid transparent;
+        &:hover {
+                background-color: variables.$main-bg-color;
+                border: 3px solid variables.$primary_color;
+            }
     }
 
     .button-container {
@@ -131,7 +136,7 @@ main {
         button {
             cursor: pointer;
             position: relative;
-            bottom: 25px
+            bottom: 25px;
         }
     }
 
