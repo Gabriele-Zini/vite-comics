@@ -180,14 +180,16 @@ export default {
 
 footer {
     background-image: url(../img/footer-bg.jpg);
+   
 
     .top-footer {
+        width: 70%;
+        margin: 0 auto;
         background-image: url(../img/dc-logo-bg.png);
         background-repeat: no-repeat;
         background-position: right bottom;
         min-height: 400px;
         color: white;
-        padding: 0 5rem;
 
 
         .footer-elems-container {
@@ -204,14 +206,12 @@ footer {
                 text-align: left;
                 margin-top: .3rem;
                 margin-right: 1rem;
-                margin-left: 1rem;
             }
 
             ul {
                 list-style: none;
                 margin-top: 1rem;
                 margin-right: 1rem;
-                margin-left: 1rem;
 
                 li {
                     margin-top: .2rem;
