@@ -91,7 +91,10 @@ export default {
 
 <template>
     <main>
-        <AppJumbotron/>
+        <AppJumbotron />
+        <div class="button-container">
+            <button>current series</button>
+        </div>
         <div class="row">
             <div class="col" v-for="comic in comics" :key="comic.id">
                 <AppMainCard :thumb="comic.thumb" :price="comic.price" :type="comic.type" :series="comic.series" />
@@ -108,12 +111,28 @@ export default {
 main {
     background-color: variables.$main-bg-color;
 
+    .button-container {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    button {
+        border: 1px solid transparent;
+        background-color: variables.$primary-color;
+        padding: .8rem 1.5rem;
+        text-transform: uppercase;
+        color: white;
+        font-weight: bolder;
+        cursor: pointer;
+        position: relative;
+        bottom: 25px
+    }
+
     .row {
         @include mixin.flex(row, center, stretch);
         flex-wrap: wrap;
         width: 70%;
         margin: 0 auto;
-        padding: 20px;
 
         .col {
             width: calc(100% / 6);
